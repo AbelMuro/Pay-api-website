@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'dm serif display';
+    src: url('./Assets/FontFiles/DMSerifDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'public sans';
+    src: url('./Assets/FontFiles/PublicSans-VariableFont_wght.ttf');
+}
+
+:root{
+    --font-serif: 'dm serif display';
+    --font-public: 'public sans';
+    --light-blue: #EDF3F8;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.2s linear;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--light-blue);
+}
+
