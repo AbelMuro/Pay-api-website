@@ -1,15 +1,26 @@
 import React from 'react';
-import NavBar from './NavBar';
-import MobileNavBar from './MobileNavBar';
+import EmailInput from '~/Components/EmailInput';
 import styles from './styles.module.css';
-import useMediaQuery from '~/Assets/Hooks/useMediaQuery.js';
+import icons from '~/Assets/Common/icons';
+import images from './images';
 
 function Header(){
-    const mobile = useMediaQuery('(max-width: 610px)');
 
     return(
         <header className={styles.header}>
-            {mobile ? <MobileNavBar/> : <NavBar/>}
+            <img className={styles.circle} src={icons['circle']}/>
+            <section className={styles.header_intro}>
+                <h1 className={styles.intro_title}>
+                    Start building with our APIs for absolutely free.
+                </h1>
+                <EmailInput/>
+                <h2 className={styles.intro_questions}>
+                    Have any questions? <a>Contact Us</a>
+                </h2>
+            </section>
+            <div className={styles.header_phone}>
+                <img src={images['phoneImage']}/>
+            </div>
         </header>
     )
 }

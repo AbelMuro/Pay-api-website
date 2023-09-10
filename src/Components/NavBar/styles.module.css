@@ -1,9 +1,12 @@
 .nav{
-    width: 100%;
+    width: 1110px;
     height: 48px;
+    margin: 40px auto 74px auto;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+    position: relative;
+    z-index: var(--closest);
 }
 
 .nav_links{
@@ -21,6 +24,10 @@
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
+}
+
+.nav_link:hover{
+    color: #36536B;
 }
 
 .nav_link:nth-of-type(1){
@@ -49,6 +56,15 @@
     letter-spacing: -0.115px;
 }
 
+.nav_demo:hover{
+    background-color: #DA6D97;
+}
+
+@media(max-width: 1180px){
+    .nav{
+        width: 90%;
+    }
+}
 
 @media(max-width: 760px){
     .nav_logo{

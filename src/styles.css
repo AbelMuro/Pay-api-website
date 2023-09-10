@@ -12,6 +12,11 @@
     --font-serif: 'dm serif display';
     --font-public: 'public sans';
     --light-blue: #EDF3F8;
+    --closest: 100;
+    --closer: 75;
+    --close: 50;
+    --far: 25;
+    --farthest: 0;
 }
 
 *{
@@ -22,7 +27,9 @@
 }
 
 body{
+    border: 0.0001px solid var(--light-blue);       /*used to avoid margin collapse */
     min-height: 100vh;
     background-color: var(--light-blue);
+    overflow-x: hidden;
 }
 

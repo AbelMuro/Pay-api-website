@@ -1,7 +1,11 @@
 .nav{
+    width: 90%;
+    margin: 40px auto 32px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: var(--closer);
 }
 
 .nav_logo{
@@ -17,7 +21,8 @@
 }
 
 .dialog{
-    width: 300px;
+    clip-path: circle(0px at 260px 60px);
+    width: 300px; 
     height: 100vh;
     border: none;
     position: fixed;
@@ -29,6 +34,18 @@
     box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    transition: clip-path 0.6s linear;
+    z-index: var(--closest);
+}
+
+.dialog_circle{
+    width: 780px;
+    object-fit: contain;
+    position: absolute;
+    left: -260px;
+    top: -540px;
+    z-index: var(--far);
 }
 
 .dialog_close{
@@ -45,6 +62,8 @@
     mask-size: 22px 23px;
     -webkit-mask-size: 22px 23px;
     background-color: #FBFCFE;
+    position: relative;
+    z-index: var(--closer);
 }
 
 .dialog_close:hover{
@@ -64,6 +83,8 @@
     align-items: center;
     gap: 32px;
     list-style-type: none;
+    position: relative;
+    z-index: var(--closer)
 }
 
 .dialog_link{
