@@ -1,5 +1,142 @@
 .company{
     width: 100%;
     height: 472px;
-    background-color: #1B262F;;
+    background-color: #1B262F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company_content{
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.company_details{
+    width: 445px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company_details h1{
+    color: #FBFCFE;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    margin-bottom: 24px;
+    letter-spacing: -0.369px;
+}
+
+.company_details p {
+    color: #FBFCFE;
+    font-family: var(--font-public);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    opacity: 0.7;
+    margin-bottom: 32px;
+}
+
+.company_details button{
+    cursor: pointer;
+    width: 129px;
+    height: 48px;
+    background-color: transparent;
+    border-radius: 24px;
+    border: 1px solid #FBFCFE;
+    color: #FBFCFE;
+    text-align: center;
+    font-family: var(--font-public);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.115px;
+}
+
+.company_partners{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 60px;
+    row-gap: 40px;
+}
+
+.company_logo:nth-of-type(1){
+    width: 129px;
+    object-fit: contain;
+}
+
+.company_logo:nth-of-type(2){
+    width: 145px;
+    object-fit: contain;
+}
+.company_logo:nth-of-type(3){
+    width: 140px;
+    object-fit: contain;
+}
+.company_logo:nth-of-type(4){
+    width: 131px;
+    object-fit: contain;
+}
+.company_logo:nth-of-type(5){
+    width: 96px;
+    object-fit: contain;
+}
+.company_logo:nth-of-type(6){
+    width: 137px;
+    object-fit: contain;
+}
+
+
+@media(max-width: 1180px){
+    .company_content{
+        width: 90%;
+        gap: 40px;
+    }
+
+    .company_partners{
+        grid-template-columns: repeat(2, auto);
+    }    
+
+    .company_details{
+        flex-shrink: 1;
+    }
+
+    .company_partners{
+        flex-shrink: 0;
+    }
+}
+
+@media(max-width: 820px){
+    .company{
+        height: 615px;
+    }
+
+    .company_content{
+        flex-direction: column-reverse;
+        gap: 72px;
+    }
+
+    .company_partners{
+        grid-template-columns: repeat(3, auto);
+    }    
+
+    .company_details{
+        align-items: center;
+    }
+
+    .company_details p{
+        text-align: center;
+    }
+
 }
