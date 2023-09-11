@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 208px;
+    transition: width 0.2s linear;
 }
 
 .header_intro{
@@ -57,9 +57,8 @@
     width: 457px;
     object-fit: contain;
     position: absolute;
-    left: -30px;
+    left: 30px;
     top: -60px;
-
 }
 
 .circle{
@@ -75,16 +74,14 @@
 @media(max-width: 1180px){
     .header{
         width: 90%;
-    }
-}
-
-/* transition*/
-@media(max-width: 1180px){
-    .header{
         gap: 50px;
     }
     .header_phone{
         width: 317px;
+    }
+
+    .header_phone img{
+        left: -10px;
     }
 }
 
