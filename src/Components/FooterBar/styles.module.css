@@ -116,5 +116,28 @@
 
 
 @media(max-width: 610px){
+    .footer{
+        height: 353px;
+    }
 
+    .circle{
+        top: 180px;
+        left: -999px;
+        right: -999px;
+        margin: auto;
+    }
+
+    .footer_content{
+        flex-direction: column;
+        gap: 39px;
+    }
+
+    .footer_links{
+        flex-direction: column;
+        gap: 31px;
+    }
+
+    .footer_link img{
+        margin-bottom: 9px;
+    }
 }
