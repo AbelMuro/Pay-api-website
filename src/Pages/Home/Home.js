@@ -5,7 +5,6 @@ import ApiDetails from './ApiDetails';
 import ApiDesign from './ApiDesign';
 import CompanyHighlights from './CompanyHighlights';
 import EnterEmail from './EnterEmail';
-import styles from './styles.module.css';
 
 function Home(){
     return(
