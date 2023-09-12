@@ -80,6 +80,10 @@
         width: 317px;
     }
 
+    .circle{
+        right: -300px;
+    }
+
     .header_phone img{
         left: -10px;
     }
@@ -87,6 +91,9 @@
 
 /* transition*/
 @media(max-width: 1030px){
+    .circle{
+        right: -400px;
+    }
     .intro_title{
         font-size: 48px;
         line-height: 56px;
@@ -111,13 +118,22 @@
         flex-direction: column-reverse;
         margin-bottom: 99px;
     }
+
+    .circle{
+        width: 949px;
+        top: -850px;
+        right: -900px;
+        left: -900px;
+        margin: auto;
+    }
     .header_phone{
         width: 155px;
         height: 300px;
     }
 
     .header_phone img{
-        width: 255px;        
+        width: 255px;   
+        left: -35px;     
         top: -30px;
     }
 
@@ -128,15 +144,6 @@
     .header_intro{
         width: 100%;
         align-items: center;
-    }
-}
-/* transition*/
-@media(max-width: 760px){
-    .circle{
-        width: 949px;
-        top: -850px;
-        right: initial;
-        left: -150px;
     }
 }
 
@@ -152,6 +159,7 @@
     }
     .header_phone img{
         width: 200px;
+        left: -25px;
     }
 
     .header_intro{
@@ -164,11 +172,10 @@
         line-height: 36px;
         letter-spacing: -0.246px;
     }
-}
-
-@media(max-width: 610px){
     .circle{
         width: 780px;
         top: -650px;
     }
+
 }
+

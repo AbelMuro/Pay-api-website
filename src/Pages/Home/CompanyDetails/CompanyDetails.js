@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import logos from '~/Assets/Common/icons';
-
+import icon from '~/Assets/Common/icons';
 
 //this is where i left off, i will need to work on the responsiveness now AND the background circle too!
 function CompanyDetails() {

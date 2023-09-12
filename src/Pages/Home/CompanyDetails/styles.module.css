@@ -5,6 +5,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../../../Assets/Common/icons/bg-pattern-circle.svg');
+    background-size: 780px 780px;
+    background-position: -350px -350px;
+    background-repeat: no-repeat;
+    margin-bottom: 150px;
+}
+
+.circle{
+    width: 780px;
+    object-fit: contain;
+    position: absolute;
+    left: -350px;
+    top: -350px;
+    z-index: var(--farthest);
 }
 
 .company_content{
@@ -12,8 +28,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: var(--closer);
 }
-
 
 .company_details{
     width: 445px;
@@ -60,6 +77,11 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.115px;
+}
+
+.company_details button:hover{
+    background-color: white;
+    color: #1B262F
 }
 
 .company_partners{
@@ -117,9 +139,19 @@
     }
 }
 
+/* tablet */
 @media(max-width: 820px){
     .company{
         height: 615px;
+        background-position: center -500px;
+        margin-bottom: 100px;
+    }
+
+    .circle{
+        top: -500px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
     }
 
     .company_content{
@@ -139,4 +171,56 @@
         text-align: center;
     }
 
+}
+
+@media(max-width: 610px){
+    .company{
+        height: 670px;
+        background-position: center -600px;
+        column-gap: 50px;
+        row-gap: 44px;
+        margin-bottom: 80px;
+    }
+
+    .company_content{
+        gap: 56px;
+    }
+
+    .company_partners{
+        grid-template-columns: repeat(2, auto);
+        justify-items: start
+    }
+
+    .company_logo:nth-of-type(1){
+        width: 107px;
+    }
+    .company_logo:nth-of-type(2){
+        width: 120px;
+    }
+    .company_logo:nth-of-type(3){
+        width: 115px;
+    }
+    .company_logo:nth-of-type(4){
+        width: 108px;
+    }
+    .company_logo:nth-of-type(5){
+        width: 79px;
+    }
+    .company_logo:nth-of-type(6){
+        width: 113px;
+    }
+    .company_details{
+        width: 90%;
+    }
+
+    .company_details h1{
+        font-size: 2rem;
+        letter-spacing: -0.246px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    .company_details p{
+        margin-bottom: 60px;
+    }
 }
