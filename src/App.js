@@ -1,6 +1,8 @@
 import React from 'react';
+import Home from './Pages/Home';
 import NavBar from './Components/NavBar';
 import MobileNavBar from './Components/MobileNavBar';
+import FooterBar from './Components/FooterBar';
 import useMediaQuery from './Assets/Hooks/useMediaQuery.js';
 import Home from './Pages/Home';
 import Pricing from './Pages/Pricing';
@@ -17,6 +19,7 @@ function App() {
                 <Route path='/' element={<Home/>}/>     
                 <Route path='/pricing' element={<Pricing/>}/>       
             </Routes>
+            <FooterBar/>
         </BrowserRouter>
     )
 }
