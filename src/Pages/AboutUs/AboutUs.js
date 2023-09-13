@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './styles.module.css';
 import images from './images';
 
-//working on responsiveness, finished tablet design for styles.about, now i need to work on mobile design
 function AboutUs() {
+
     return(
         <>
             <section className={styles.about}>
@@ -37,34 +37,28 @@ function AboutUs() {
             <img className={styles.team}/>       
             <div className={styles.team_info}>
                 <section>
-                    <hr/>
                     <h3 className={styles.team_title}>
                         Team Members
                     </h3>
                     <strong className={styles.team_data}>
                         300+
-                    </strong>
-                    <hr/>                    
+                    </strong>                
                 </section>
                 <section>
-                    <hr/>
                     <h3 className={styles.team_title}>
                         Offices in the US
                     </h3>
                     <strong className={styles.team_data}>
                         3
-                    </strong>
-                    <hr/>                    
+                    </strong>                 
                 </section>
                 <section>
-                    <hr/>
                     <h3 className={styles.team_title}>
                         Transactions analyzed
                     </h3>
                     <strong className={styles.team_data}>
                         10M+
-                    </strong>
-                    <hr/>                    
+                    </strong>               
                 </section>
             </div>   
             <div className={styles.team_misc}>
