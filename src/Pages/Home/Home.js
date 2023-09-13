@@ -4,7 +4,7 @@ import CompanyDetails from './CompanyDetails';
 import ApiDetails from './ApiDetails';
 import ApiDesign from './ApiDesign';
 import CompanyHighlights from './CompanyHighlights';
-import EnterEmail from './EnterEmail';
+import EnterEmail from '~/Components/EnterEmail';
 
 function Home(){
     return(

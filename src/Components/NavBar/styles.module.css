@@ -16,6 +16,10 @@
     list-style-type: none;
 }
 
+.nav_links a {
+    pointer-events: none;
+}
+
 .nav_link{
     color: rgba(54, 83, 107, 0.7);
     font-family: var(--font-public);
@@ -37,6 +41,7 @@
 .nav_logo{
     width: 135px;
     object-fit: contain;
+    pointer-events: none;
 }
 
 .nav_demo{

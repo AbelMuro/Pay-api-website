@@ -98,6 +98,10 @@
     cursor: pointer;
 }
 
+.dialog_link a {
+    pointer-events: none;
+}
+
 .dialog_link:hover{
     color: #36536B;
 }

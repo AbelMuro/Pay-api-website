@@ -1,0 +1,139 @@
+.about{
+    width: 920px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    row-gap: 52px;
+    column-gap: 30px;
+    margin-bottom: 100px;
+}
+
+.about_title{
+    grid-column: 1/3;
+    color: #36536B;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -0.431px;
+
+}
+
+.about_second_title{
+    color: #36536B;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 125% */
+    letter-spacing: -0.246px;
+}
+
+.about_desc{
+    color: #6C8294;
+    font-family: var(--font-public);
+    font-size: 0.9375rem;
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 186.667% */
+}
+
+.team{
+    width: 100%;
+    object-fit: contain;
+    content: url('./images/image-team-members.jpg');
+    margin-bottom: 72px;
+}
+
+.team_info{
+    width: 1110px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 73px;
+}
+
+.team_info section{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.team_info section hr{
+    opacity: 0.25;
+    background-color: #36536B;
+}
+
+.team_info section hr:first-child{
+    margin-bottom: 16px;
+}
+
+.team_title{
+    color: #36536B;
+    font-family: var(--font-public);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+
+.team_data{
+    color: #BA4270;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px; /* 128.571% */
+    letter-spacing: -0.431px;
+    margin-bottom: 16px;
+}
+
+
+.team_misc{
+    width: 920px;
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    margin: auto;
+    column-gap: 30px;
+    row-gap: 56px;
+    margin-bottom: 100px;
+}
+
+.team_misc_title{
+    color: #36536B;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.246px;
+}
+
+.team_misc_desc{
+    color: #6C8294;
+    font-family: var(--font-public);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 186.667% */
+}
+
+@media(max-width: 1000px){
+    .about{
+        width: 90%;
+        row-gap: 54px;
+    }
+
+    .about_title{
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: -0.369px;
+    }
+
+    .about_desc{
+        margin-bottom: 10px;
+    }
+}

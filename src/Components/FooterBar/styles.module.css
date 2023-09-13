@@ -28,6 +28,8 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    position: relative;
+    z-index: var(--close);
 }
 
 .footer_link{
@@ -40,9 +42,14 @@
     cursor: pointer;
 }
 
+.footer_link a {
+    pointer-events: none;
+}
+
 .footer_link img{
     width: 135px;
     object-fit: contain;
+    pointer-events: none;
     margin-right: 24px;
 }
 
@@ -54,6 +61,8 @@
     display: flex;
     align-items: center;
     gap: 25px;
+    position: relative;
+    z-index: var(--close);
 }
 
 .footer_socialLink{
