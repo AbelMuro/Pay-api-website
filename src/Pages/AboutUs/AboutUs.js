@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './styles.module.css';
 import images from './images';
 
+
+//working on the responsiveness
 function AboutUs() {
 
     return(
