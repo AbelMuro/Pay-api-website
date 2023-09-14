@@ -17,10 +17,10 @@ function Pricing(){
                     Pricing
                 </h1>
                 {
-                    planData.map((plan) => {
+                    planData.map((plan, i) => {
                         const currentPlanDetails = plan['plan details'];
                         return(
-                            <div className={styles.pricing_plan}>
+                            <div className={styles.pricing_plan} key={i}>
                                 <h2>
                                     {plan.plan}
                                 </h2>
@@ -32,10 +32,10 @@ function Pricing(){
                                 </strong>
                                 <hr/>
                                 <ul className={styles.plan_details}>
-                                    {planDetails.map((detail) => {
+                                    {planDetails.map((detail, i) => {
                                         const planIncluded = currentPlanDetails.includes(detail);
                                         return(
-                                            <li className={planIncluded ? styles.included : styles.excluded}>
+                                            <li className={planIncluded ? styles.included : styles.excluded} key={i}>
                                                 {detail}
                                             </li>
                                         )
