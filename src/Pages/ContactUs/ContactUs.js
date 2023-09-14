@@ -4,6 +4,8 @@ import EnterEmail from '~/Components/EnterEmail';
 import styles from './styles.module.css';
 import icons from './icons';
 
+
+//currently on mobile 
 function ContactUs() {
     return(
         <>
