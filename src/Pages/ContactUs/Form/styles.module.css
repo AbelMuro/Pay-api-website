@@ -1,0 +1,28 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.submit{
+    width: 152px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: transparent;
+    border: 1px solid #36536B;
+    cursor: pointer;
+    color: #36536B;
+    text-align: center;
+    font-family: var(--font-public);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.115px;
+}
+
+.submit:hover{
+    color: white;
+    border: 1px solid #36536B;
+    background: #36536B;
+}

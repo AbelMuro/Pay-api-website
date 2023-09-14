@@ -1,0 +1,36 @@
+.check{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+}
+
+.check_box{
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(54, 83, 107, 0.25);
+    cursor: pointer
+}
+
+.check_box input{
+    display: none;
+}
+
+.check_mark{
+    width: 24px;
+    object-fit: contain;
+}
+
+.check_desc{
+    flex-shrink: 1;
+    text-wrap: initial;
+    color: #36536B;
+    font-family: var(--font-public);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+    letter-spacing: -0.115px;
+}

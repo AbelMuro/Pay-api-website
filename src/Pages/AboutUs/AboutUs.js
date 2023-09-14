@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './styles.module.css';
-import images from './images';
+import EnterEmail from '~/Components/EnterEmail';
+import icons from '~/Assets/Common/icons';
 
 
-//working on the responsiveness
 function AboutUs() {
 
     return(
         <>
+            <img className={styles.circle_background_one} src={icons['circle']}/>
             <section className={styles.about}>
                 <h1 className={styles.about_title}>
                     We empower innovators
@@ -36,7 +37,11 @@ function AboutUs() {
                     institutions and developers. 
                 </p>
             </section>  
-            <img className={styles.team}/>       
+            <div className={styles.image_box}>
+                <img className={styles.team}/>   
+                <img className={styles.circle_background_two} src={icons['circle']}/>
+            </div>
+
             <div className={styles.team_info}>
                 <section>
                     <h3 className={styles.team_title}>
@@ -85,6 +90,7 @@ function AboutUs() {
                     and skills.
                 </p>
             </div>
+            <EnterEmail/>
         </>
     )
 }

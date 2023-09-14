@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './Pages/Home';
 import Pricing from './Pages/Pricing';
 import AboutUs from './Pages/AboutUs';
+import ContactUs from './Pages/ContactUs';
 import NavBar from './Components/NavBar';
 import MobileNavBar from './Components/MobileNavBar';
 import FooterBar from './Components/FooterBar';
@@ -19,6 +20,7 @@ function App() {
                 <Route path='/' element={<Home/>}/>     
                 <Route path='/pricing' element={<Pricing/>}/>     
                 <Route path='/about' element={<AboutUs/>}/>  
+                <Route path='/contact' element={<ContactUs/>}/>
             </Routes>
             <FooterBar/>
         </BrowserRouter>

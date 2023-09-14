@@ -1,3 +1,15 @@
+.circle_background_one, .circle_background_two{
+    width: 780px;
+    object-fit: contain;
+    position: absolute;
+    z-index: var(--farthest);
+}
+
+.circle_background_one{
+    top: -550px;
+    right: -250px;
+}
+
 .about{
     width: 920px;
     margin: auto;
@@ -6,6 +18,8 @@
     row-gap: 52px;
     column-gap: 10px;
     margin-bottom: 100px;
+    position: relative;
+    z-index: var(--close);
 }
 
 .about_title{
@@ -44,11 +58,24 @@
     margin-bottom: 4px;
 }
 
+.image_box{
+    position: relative;
+}
+
 .team{
     width: 100%;
     object-fit: contain;
     content: url('./images/image-team-members.jpg');
     margin-bottom: 72px;
+    position: relative;
+    z-index: var(--close);
+}
+
+.circle_background_two{
+    top: -999px;
+    bottom: -939px;
+    left: -600px;
+    margin: auto;
 }
 
 .team_info{
@@ -58,6 +85,8 @@
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 73px;
+    position: relative;
+    z-index: var(--close);
 }
 
 .team_info section{
@@ -91,6 +120,8 @@
 
 
 .team_misc{
+    position: relative;
+    z-index: var(--close);
     width: 920px;
     display: grid;
     grid-template-columns: 255px 1fr;
@@ -143,6 +174,15 @@
 }
 
 @media(max-width: 820px){
+    .circle_background_one{
+        top: -430px;
+        right: -500px
+    }
+
+    .circle_background_two{
+        display: none;
+    }
+
     .about{
         row-gap: 54px;
         grid-template-columns: 223px 1fr;
@@ -168,9 +208,21 @@
         gap: 10px;
         margin-bottom: 64px;
     }
+
+    .team_misc{
+        grid-template-columns: 223px 1fr;
+        column-gap: 10px;
+        row-gap: 64px;
+        margin-bottom: 72px;
+    }
 }
 
 @media(max-width: 610px){
+    .circle_background_one{
+        top: -630px;
+        right: -450px
+    }
+
     .about{
         grid-template-columns: 100%;
         row-gap: 16px;
@@ -179,7 +231,7 @@
 
     .about_title{
         font-size: 2rem;
-        line-height: 36px; /* 112.5% */
+        line-height: 36px;
         letter-spacing: -0.246px;
         grid-column: initial;
         margin-bottom: 24px;
@@ -225,6 +277,28 @@
         padding-top: 0px;
     }
 
+    .team_misc{
+        grid-template-columns: 100%;
+        row-gap: 16px;
+        margin-bottom: 48px;
+    }
+
+    .team_misc_title{
+        color: #36536B;
+        text-align: center;
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        line-height: 32px;
+        letter-spacing: -0.185px;
+    }
+
+    .team_misc_desc{
+        text-align: center;
+    }
+
+    .team_misc_desc:nth-of-type(1){
+        margin-bottom: 32px;
+    }
 }
 
 @media(max-width: 500px){
