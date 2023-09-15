@@ -7,14 +7,14 @@ function CompanyHighlights() {
 
     const variants = {
         hidden: {
-            x: -100,
+            x: -200,
             opacity: 0,
         },
         show: {
             x: 0,
             opacity: 1,
             transition: {
-                duration: 0.6
+                duration: 0.8
             }
         }
     }

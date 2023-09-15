@@ -33,7 +33,7 @@ function Header(){
 
 
     return(
-        <motion.header className={styles.header} initial='hidden' animate='show' transition={{staggerChildren: 0.6}}>
+        <motion.header className={styles.header} initial='hidden' whileInView='show' viewport={{once: true}} transition={{staggerChildren: 0.6}}>
             <motion.img className={styles.circle} src={icons['circle']} variants={circleVariants}/>
             <section className={styles.header_intro}>
                 <motion.h1 className={styles.intro_title} variants={textVariants}>
@@ -44,7 +44,7 @@ function Header(){
                     Have any questions? <a>Contact Us</a>
                 </motion.h2>
             </section>
-            <motion.div className={styles.header_phone} initial={{opacity: 0,y: -300,}} animate={{opacity: 1, y: 0,}} transition={{duration: 1.4}}>
+            <motion.div className={styles.header_phone} initial={{opacity: 0,y: -300}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1.7}}>
                 <img src={images['phoneImage']}/>
             </motion.div>
         </motion.header>

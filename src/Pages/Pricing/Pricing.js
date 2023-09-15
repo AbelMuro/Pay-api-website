@@ -2,46 +2,71 @@ import React from 'react';
 import styles from './styles.module.css';
 import planData from './PlanData';
 import EnterEmail from '~/Components/EnterEmail';
+import {motion} from 'framer-motion';
 
 function Pricing(){
     const planDetails = ["Transactions", "Auth", "Identity", "Investments", "Assets", "Liabilities", "Income"];
 
+    const variants = {
+        hidden: {
+            x: -150,
+            opacity: 0
+        },
+        show: {
+            x: 0,
+            opacity: 1,
+            transition: {duration: 0.8}
+        }
+    }
+
+    const lineVariants = {
+        hidden: {
+            x: -150,
+            opacity: 0
+        },
+        show: {
+            x: 0,
+            opacity: 0.25,
+            transition: {duration: 0.8}
+        }
+    }
+
     return(
         <>
             <section className={styles.pricing}>
-                <h1 className={styles.pricing_title}>
+                <motion.h1 className={styles.pricing_title} initial='hidden' whileInView='show' variants={variants} viewport={{once: true}}>
                     Pricing
-                </h1>
+                </motion.h1>
                 {
                     planData.map((plan, i) => {
                         const currentPlanDetails = plan['plan details'];
                         return(
-                            <div className={styles.pricing_plan} key={i}>
-                                <h2>
+                            <motion.div className={styles.pricing_plan} key={i} initial='hidden' whileInView='show' transition={{staggerChildren: 0.2}} viewport={{once: true}}>
+                                <motion.h2 variants={variants}>
                                     {plan.plan}
-                                </h2>
-                                <p>
+                                </motion.h2>
+                                <motion.p variants={variants}>
                                     {plan.desc}
-                                </p>
-                                <strong>
+                                </motion.p>
+                                <motion.strong variants={variants}>
                                     {plan.price}
-                                </strong>
-                                <hr/>
+                                </motion.strong>
+                                <motion.hr variants={lineVariants}/>
                                 <ul className={styles.plan_details}>
                                     {planDetails.map((detail, i) => {
                                         const planIncluded = currentPlanDetails.includes(detail);
                                         return(
-                                            <li className={planIncluded ? styles.included : styles.excluded} key={i}>
+                                            <motion.li className={planIncluded ? styles.included : styles.excluded} key={i} variants={variants}>
                                                 {detail}
-                                            </li>
+                                            </motion.li>
                                         )
                                     })}                                                       
                                 </ul>
-                                <hr/>
-                                <button className={styles.plan_request}>
+                                <motion.hr variants={lineVariants}/>
+                                <motion.button className={styles.plan_request} variants={variants}>
                                     Request Access
-                                </button>
-                            </div>
+                                </motion.button>
+                            </motion.div>
                         )
                     })
                 }
