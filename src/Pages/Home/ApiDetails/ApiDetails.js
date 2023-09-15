@@ -11,7 +11,7 @@ function ApiDetails() {
         },
         show: {
             scale: 1,
-            transition: {type: 'spring', stiffness: 150, damping: 6}
+            transition: {duration: 0.8}
         }
     }
 
@@ -33,7 +33,7 @@ function ApiDetails() {
             <motion.div className={styles.image_box} variants={imageVariants} initial='hidden' whileInView='show' viewport={{once: true, amount: 1, margin: '-100px'}}>
                 <img className={styles.api_code} src={images['codeIllustration']}/>
             </motion.div>
-            <motion.div className={styles.api_details} initial='hidden' whileInView='show' viewport={{once: true, amount: 1.0}} transition={{staggerChildren: 0.6}}>
+            <motion.div className={styles.api_details} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.9}} transition={{staggerChildren: 0.6}}>
                 <motion.h1 variants={textVariants}>
                     Easy to implement
                 </motion.h1>

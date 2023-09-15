@@ -3,9 +3,33 @@ import styles from './styles.module.css';
 import icons from './icons';
 import commonIcons from '~/Assets/Common/icons';
 import { useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 function FooterBar() {
     const navigate = useNavigate();
+
+    const linkVariants = {
+        hidden: {
+            y: 200,
+            opacity: 0,
+        },
+        show: {
+            y: 0,
+            opacity: 1,
+            transition: {duration: 0.6}
+        }
+    }
+
+    const iconVariants = {
+        hidden: {
+            y: 200,
+            opacity: 0,
+        },
+        show: {
+            y: 0,
+            opacity: 1
+        }
+    }
 
     const handleLink = (e) => {
         const link = e.target.getAttribute('data-link');
@@ -16,25 +40,25 @@ function FooterBar() {
         <footer className={styles.footer}>
             <img className={styles.circle} src={commonIcons['circle']}/>
             <div className={styles.footer_content}>
-                <ul className={styles.footer_links}>
-                    <li className={styles.footer_link} onClick={handleLink} data-link='/'>
+                <motion.ul className={styles.footer_links} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.6}} transition={{staggerChildren: 0.4}}>
+                    <motion.li className={styles.footer_link} onClick={handleLink} data-link='/' variants={linkVariants}>
                         <img src={icons['logo']}/>
-                    </li>
-                    <li className={styles.footer_link} onClick={handleLink} data-link='/pricing'>
+                    </motion.li>
+                    <motion.li className={styles.footer_link} onClick={handleLink} data-link='/pricing' variants={linkVariants}>
                         <a>Pricing</a>
-                    </li>
-                    <li className={styles.footer_link} onClick={handleLink} data-link='/about'>
+                    </motion.li>
+                    <motion.li className={styles.footer_link} onClick={handleLink} data-link='/about' variants={linkVariants}>
                         <a>About</a>
-                    </li>
-                    <li className={styles.footer_link} onClick={handleLink} data-link='/contact'>
+                    </motion.li>
+                    <motion.li className={styles.footer_link} onClick={handleLink} data-link='/contact' variants={linkVariants}>
                         <a>Contact</a>
-                    </li>
-                </ul>
-                <ul className={styles.footer_socialLinks}>
-                    <li className={styles.footer_socialLink}></li>
-                    <li className={styles.footer_socialLink}></li>
-                    <li className={styles.footer_socialLink}></li>
-                </ul>
+                    </motion.li>
+                </motion.ul>
+                <motion.ul className={styles.footer_socialLinks} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.6}} transition={{staggerChildren: 0.2}}>
+                    <motion.li className={styles.footer_socialLink} variants={iconVariants}></motion.li>
+                    <motion.li className={styles.footer_socialLink} variants={iconVariants}></motion.li>
+                    <motion.li className={styles.footer_socialLink} variants={iconVariants}></motion.li>
+                </motion.ul>
             </div>
         </footer>
     )

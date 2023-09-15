@@ -7,6 +7,7 @@ import CompanyHighlights from './CompanyHighlights';
 import EnterEmail from '~/Components/EnterEmail';
 
 function Home(){
+
     return(
         <section>
             <Header/>
