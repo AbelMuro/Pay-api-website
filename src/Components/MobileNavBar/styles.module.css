@@ -8,16 +8,29 @@
     z-index: var(--closer);
 }
 
+.circle{
+    position: absolute;
+    width: 780px;
+    object-fit: contain;
+    top: -600px;
+    right: -550px;
+    z-index: var(--farthest);
+}
+
 .nav_logo{
     width: 135px;
     object-fit: contain;
     cursor: pointer;
+    position: relative;
+    z-index: var(--close);
 }
 
 .nav_menu{
     width: 28px;
     object-fit: contain;
     cursor: pointer;
+    position: relative;
+    z-index: var(--close);
 }
 
 .dialog{
@@ -35,7 +48,6 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: clip-path 0.6s linear;
     z-index: var(--closest);
 }
 
@@ -84,7 +96,7 @@
     gap: 32px;
     list-style-type: none;
     position: relative;
-    z-index: var(--closer)
+    z-index: var(--closer);
 }
 
 .dialog_link{

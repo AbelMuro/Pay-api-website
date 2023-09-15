@@ -8,7 +8,6 @@ function AboutUs() {
 
     return(
         <>
-            <img className={styles.circle_background_one} src={icons['circle']}/>
             <section className={styles.about}>
                 <h1 className={styles.about_title}>
                     We empower innovators

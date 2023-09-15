@@ -33,3 +33,9 @@
         margin: 0px auto 10px;
     }
 }
+
+@media(max-width: 610px){
+    .form{
+        margin-bottom: 40px;
+    }
+}

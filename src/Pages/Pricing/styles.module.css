@@ -8,15 +8,6 @@
     position: relative;
 }
 
-.circle{
-    width: 780px;
-    object-fit: contain;
-    position: absolute;
-    top: -700px;
-    right: -300px;
-    z-index: var(--farthest);
-}
-
 .pricing_title{
     grid-column: 1/4;
     color: #36536B;
@@ -139,10 +130,6 @@
     .pricing{
         row-gap: 69px;
         margin-bottom: 100px;
-    }
-
-    .circle{
-        right: -500px;
     }
 
     .pricing_title{

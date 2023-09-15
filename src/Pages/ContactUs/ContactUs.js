@@ -3,7 +3,7 @@ import Form from './Form';
 import EnterEmail from '~/Components/EnterEmail';
 import styles from './styles.module.css';
 import icons from './icons';
-
+import commonIcons from '~/Assets/Common/icons';
 
 //currently on mobile 
 function ContactUs() {

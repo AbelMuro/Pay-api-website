@@ -2,17 +2,13 @@ import React from 'react';
 import styles from './styles.module.css';
 import planData from './PlanData';
 import EnterEmail from '~/Components/EnterEmail';
-import icons from '~/Assets/Common/icons';
-import useMediaQuery from '~/Assets/Hooks/useMediaQuery.js';
 
 function Pricing(){
-    const mobile = useMediaQuery('(max-width: 610px)');
     const planDetails = ["Transactions", "Auth", "Identity", "Investments", "Assets", "Liabilities", "Income"];
 
     return(
         <>
             <section className={styles.pricing}>
-                <img className={styles.circle} src={icons['circle']}/>
                 <h1 className={styles.pricing_title}>
                     Pricing
                 </h1>

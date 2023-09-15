@@ -1,14 +1,10 @@
-.circle_background_one, .circle_background_two{
+.circle_background_two{
     width: 780px;
     object-fit: contain;
     position: absolute;
     z-index: var(--farthest);
 }
 
-.circle_background_one{
-    top: -550px;
-    right: -250px;
-}
 
 .about{
     width: 920px;
@@ -174,11 +170,6 @@
 }
 
 @media(max-width: 820px){
-    .circle_background_one{
-        top: -430px;
-        right: -500px
-    }
-
     .circle_background_two{
         display: none;
     }
@@ -218,11 +209,6 @@
 }
 
 @media(max-width: 610px){
-    .circle_background_one{
-        top: -630px;
-        right: -450px
-    }
-
     .about{
         grid-template-columns: 100%;
         row-gap: 16px;

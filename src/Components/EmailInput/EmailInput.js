@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
+import {motion} from 'framer-motion'
 import styles from './styles.module.css';
 
-function EmailInput(){
+function EmailInput({variants}){
     const [email, setEmail] = useState('');
     const emptyMessageRef = useRef();
     const invalidMessageRef = useRef();
@@ -35,7 +36,7 @@ function EmailInput(){
     }, [email])
 
     return(                
-        <form className={styles.input_container} onInvalid={handleInvalid}>
+        <motion.form className={styles.input_container} onInvalid={handleInvalid} variants={variants}>
             <input 
                 type='email' 
                 placeholder='Enter email address' 
@@ -50,7 +51,7 @@ function EmailInput(){
                 Invalid email.
             </div>        
             <input type='submit'/>                
-        </form>
+        </motion.form>
     )
 }
 

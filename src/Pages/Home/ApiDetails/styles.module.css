@@ -11,6 +11,7 @@
     width: 445px;
     height: 284px;
     position: relative;
+    transition: width 0.2s linear, height 0.2s linear;
     flex-shrink: 0;
 }
 
