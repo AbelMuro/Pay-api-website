@@ -5,7 +5,6 @@ import icons from '~/Assets/Common/icons';
 import {motion} from 'framer-motion';
 
 
-//i want to do some refactoring on the last element of this component
 function AboutUs() {
 
     const textVariants = {
@@ -36,7 +35,7 @@ function AboutUs() {
         },
         show: {
             x: 0,
-            transition: {duration: 1.12}
+            transition: {duration: 0.72}
         }
     }
 
@@ -90,8 +89,11 @@ function AboutUs() {
                     robust reporting for traditional financial 
                     institutions and developers. 
                 </motion.p>
-            </motion.section>  
-            <motion.div className={styles.image_box} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.5}} transition={{staggerChildren: 0.7}}>
+            </motion.section> 
+
+
+
+            <motion.div className={styles.image_box} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.6}} transition={{staggerChildren: 0.3}}>
                 <motion.img className={styles.team} variants={imageVariants}/>  
                 <motion.img className={styles.circle_background_two} src={icons['circle']} variants={circleVariants}/>                
             </motion.div>
@@ -105,7 +107,7 @@ function AboutUs() {
                         300+
                     </motion.strong>                
                 </motion.section>
-                <motion.section initial='hidden' whileInView='show' variants={teamContainerVariants}viewport={{once: true, amount: 0.8}} transition={{duration: 0.6, staggerChildren: 0.4}}>
+                <motion.section initial='hidden' whileInView='show' variants={teamContainerVariants} viewport={{once: true, amount: 0.8}} transition={{duration: 0.6, staggerChildren: 0.4}}>
                     <motion.h3 className={styles.team_title} variants={teamDetailVariants}>
                         Offices in the US
                     </motion.h3>
@@ -122,28 +124,36 @@ function AboutUs() {
                     </motion.strong>               
                 </motion.section>
             </div>   
-            <motion.div className={styles.team_misc} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.6}} transition={{staggerChildren: 0.4}}>
-                <motion.h2 className={styles.team_misc_title} variants={textVariants}>
-                    The Culture
-                </motion.h2>
-                <motion.p className={styles.team_misc_desc} variants={textVariants}>
-                    We strongly believe there's always an opportunity 
-                    to learn from each other outside of day-to-day work, 
-                    whether it's company-wide offsites, internal hackathons, 
-                    or co-worker meetups. We always value cross-team 
-                    collaboration and diversity of thought, no matter 
-                    the job title.
-                </motion.p>
-                <motion.h2 className={styles.team_misc_title} variants={textVariants}>
-                    The People
-                </motion.h2>
-                <motion.p className={styles.team_misc_desc} variants={textVariants}>
-                    We're all passionate about building a more 
-                    efficient and inclusive financial infrastructure 
-                    together. At PayAPI, we have diverse backgrounds 
-                    and skills.
-                </motion.p>
-            </motion.div>
+
+
+
+            <div className={styles.team_misc}>
+                <motion.div initial='hidden' whileInView='show' viewport={{once: true, amount: 0.6}} transition={{staggerChildren: 0.4}}>
+                    <motion.h2 className={styles.team_misc_title} variants={textVariants}>
+                        The Culture
+                    </motion.h2>
+                    <motion.p className={styles.team_misc_desc} variants={textVariants}>
+                        We strongly believe there's always an opportunity 
+                        to learn from each other outside of day-to-day work, 
+                        whether it's company-wide offsites, internal hackathons, 
+                        or co-worker meetups. We always value cross-team 
+                        collaboration and diversity of thought, no matter 
+                        the job title.
+                    </motion.p>                    
+                </motion.div>
+                <motion.div initial='hidden' whileInView='show' viewport={{once: true, amount: 0.6}} transition={{staggerChildren: 0.4}}>
+                    <motion.h2 className={styles.team_misc_title} variants={textVariants}>
+                        The People
+                    </motion.h2>
+                    <motion.p className={styles.team_misc_desc} variants={textVariants}>
+                        We're all passionate about building a more 
+                        efficient and inclusive financial infrastructure 
+                        together. At PayAPI, we have diverse backgrounds 
+                        and skills.
+                    </motion.p>                    
+                </motion.div>
+
+            </div>
             <EnterEmail/>
         </>
     )

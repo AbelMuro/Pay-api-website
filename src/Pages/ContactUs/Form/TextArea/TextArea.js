@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styles from './styles.module.css';
+import {motion} from 'framer-motion';
 
-
-function TextArea() {
+function TextArea({variants}) {
     const [text, setText] = useState('');
     const textAreaRef = useRef();
     const emptyMessageRef = useRef();
@@ -37,7 +37,7 @@ function TextArea() {
 
 
     return(
-        <fieldset className={styles.fieldset}>
+        <motion.fieldset className={styles.fieldset} variants={variants}>
             <textarea 
                 name='message'
                 value={text} 
@@ -52,7 +52,7 @@ function TextArea() {
             <div className={styles.errorMessage} ref={emptyMessageRef}>
                 This field can't be empty
             </div>        
-        </fieldset>
+        </motion.fieldset>
 
     )
 }

@@ -3,27 +3,52 @@ import Form from './Form';
 import EnterEmail from '~/Components/EnterEmail';
 import styles from './styles.module.css';
 import icons from './icons';
+import {motion} from 'framer-motion';
 
 function ContactUs() {
+
+    const titleVariants = {
+        hidden: {
+            x: -150,
+            opacity: 0
+        },
+        show: {
+            x: 0,
+            opacity: 1,
+            transition: {duration: 0.7}
+        }
+    }
+
+    const iconsVariants = {
+        hidden: {
+            y: -150,
+            opacity: 0
+        },
+        show: {
+            y: 0,
+            opacity: 1
+        }
+    }
+
     return(
         <>
             <section className={styles.contact}>
-                <h1 className={styles.contact_title}>
+                <motion.h1 className={styles.contact_title} initial='hidden' whileInView='show' variants={titleVariants} viewport={{once: true, amount: 0.6}}>
                     Submit a help request and 
                     we’ll get in touch shortly.
-                </h1>
+                </motion.h1>
                 <Form/>
-                <div className={styles.contact_partners}>
-                    <h2 className={styles.partners_title}>
+                <motion.div className={styles.contact_partners} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.7}} transition={{staggerChildren: 0.4}}>
+                    <motion.h2 className={styles.partners_title} variants={iconsVariants}>
                         Join the thousands of innovators that are already building with us
-                    </h2>
-                    <img className={styles.partners_icon} src={icons['tesla']}/>
-                    <img className={styles.partners_icon} src={icons['microsoft']}/>
-                    <img className={styles.partners_icon} src={icons['hp']}/>
-                    <img className={styles.partners_icon} src={icons['oracle']}/>
-                    <img className={styles.partners_icon} src={icons['google']}/>
-                    <img className={styles.partners_icon} src={icons['nvidia']}/>
-                </div>
+                    </motion.h2>
+                    <motion.img className={styles.partners_icon} src={icons['tesla']} variants={iconsVariants}/>
+                    <motion.img className={styles.partners_icon} src={icons['microsoft']} variants={iconsVariants}/>
+                    <motion.img className={styles.partners_icon} src={icons['hp']} variants={iconsVariants}/>
+                    <motion.img className={styles.partners_icon} src={icons['oracle']} variants={iconsVariants}/>
+                    <motion.img className={styles.partners_icon} src={icons['google']} variants={iconsVariants}/>
+                    <motion.img className={styles.partners_icon} src={icons['nvidia']} variants={iconsVariants}/>
+                </motion.div>
             </section>  
             <EnterEmail/>      
         </>

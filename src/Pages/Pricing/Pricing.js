@@ -31,6 +31,32 @@ function Pricing(){
         }
     }
 
+    const includedVariants = {
+        hidden: {
+            x: -150,
+            opacity: 0,
+        },
+        show: {
+            x: 0,
+            opacity: 1,
+            transition: {duration: 0.8}
+        }
+    }
+
+    const excludedVariants = {
+        hidden: {
+            x: -150,
+            opacity: 0,
+        },
+        show: {
+            x: 0,
+            opacity: 0.5,
+            transition: {duration: 0.8}
+        }
+    }
+
+
+
     return(
         <>
             <section className={styles.pricing}>
@@ -56,7 +82,7 @@ function Pricing(){
                                     {planDetails.map((detail, i) => {
                                         const planIncluded = currentPlanDetails.includes(detail);
                                         return(
-                                            <motion.li className={planIncluded ? styles.included : styles.excluded} key={i} variants={variants}>
+                                            <motion.li className={planIncluded ? styles.included : styles.excluded} key={i} variants={planIncluded ? includedVariants : excludedVariants}>
                                                 {detail}
                                             </motion.li>
                                         )
