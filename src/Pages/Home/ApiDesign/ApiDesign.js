@@ -44,7 +44,7 @@ function ApiDesign() {
 
     return(
         <section className={styles.api}>
-            <motion.img className={styles.circle} src={icons['circle']} initial='hidden' whileInView='show' variants={circleVariants} viewport={{once: true, amount: 0.1}}/>
+            <motion.img className={styles.circle} src={icons['circle']} initial='hidden' whileInView='show' variants={circleVariants} viewport={{once: true, amount: 0.6}}/>
             <motion.div className={styles.api_details} initial='hidden' whileInView='show' viewport={{once: true, amount: 0.8}} transition={{staggerChildren: 0.4}}>
                <motion.h1 variants={textVariants}>
                     Simple UI & UX
