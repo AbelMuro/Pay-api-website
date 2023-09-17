@@ -5,6 +5,8 @@ import icons from '~/Assets/Common/icons';
 import images from './images';
 import {motion} from 'framer-motion';
 
+
+//i need to remove the transition for opacity for ALL elements in the app
 function Header(){
 
     const textVariants = {
