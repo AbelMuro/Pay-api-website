@@ -33,7 +33,7 @@ body{
     background-color: var(--light-blue);
 }
 
-html, body {
+html, body, #root {
     max-width: 100vw;
     transition: none;
     overflow-x: hidden;
