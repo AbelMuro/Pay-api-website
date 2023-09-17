@@ -33,18 +33,18 @@ function Header(){
 
 
     return(
-        <motion.header className={styles.header} layout='position' initial='hidden' whileInView='show' viewport={{once: true}} transition={{staggerChildren: 0.6}}>
-            <motion.img className={styles.circle} src={icons['circle']} variants={circleVariants} items-center/>
+        <motion.header className={styles.header} initial='hidden' whileInView='show' viewport={{once: true}} transition={{staggerChildren: 0.6}}>
+            <motion.img className={styles.circle} src={icons['circle']} variants={circleVariants} layout='position'/>
             <section className={styles.header_intro}>
-                <motion.h1 className={styles.intro_title} variants={textVariants} items-center>
+                <motion.h1 className={styles.intro_title} variants={textVariants} layout='position'>
                     Start building with our APIs for absolutely free.
                 </motion.h1>
                 <EmailInput variants={textVariants}/>
-                <motion.h2 className={styles.intro_questions} variants={textVariants} items-center>
+                <motion.h2 className={styles.intro_questions} variants={textVariants} layout='position'>
                     Have any questions? <a>Contact Us</a>
                 </motion.h2>
             </section>
-            <motion.div className={styles.header_phone} layout='position' initial={{opacity: 0,y: -300}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1.7}} items-center>
+            <motion.div className={styles.header_phone} layout='position' initial={{opacity: 0,y: -300}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1.7}}>
                 <img src={images['phoneImage']}/>
             </motion.div>
         </motion.header>
