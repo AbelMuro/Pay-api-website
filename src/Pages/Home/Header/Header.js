@@ -40,7 +40,7 @@ function Header(){
                     Have any questions? <a>Contact Us</a>
                 </motion.h2>
             </section>
-            <motion.div className={styles.header_phone} initial={{opacity: 0,y: -300}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1.7}}>
+            <motion.div className={styles.header_phone} initial={{y: -300}} whileInView={{y: 0}} viewport={{once: true}} transition={{duration: 1.7}}>
                 <img src={images['phoneImage']}/>
             </motion.div>
         </motion.header>
