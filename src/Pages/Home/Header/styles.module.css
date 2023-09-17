@@ -26,7 +26,6 @@
     line-height: 72px;
     letter-spacing: -0.554px;
     margin-bottom: 21px;
-    transition: all 0.2s linear, opacity 0s;
 }
 
 
@@ -37,7 +36,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    transition: all 0.2s linear, opacity 0s;
 }
 
 .intro_questions a{
@@ -54,7 +52,6 @@
     height: 498px;
     position: relative;
     z-index: var(--close);
-    transition: all 0.2s linear, opacity 0s;
 }
 
 .header_phone img{
@@ -73,7 +70,6 @@
     top: -400px;
     right: -160px;
     z-index: var(--farthest);
-    transition: all 0.2s linear, opacity 0s;
 }
 
 /* transition*/
