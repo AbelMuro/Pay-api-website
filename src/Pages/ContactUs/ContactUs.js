@@ -33,7 +33,7 @@ function ContactUs() {
     return(
         <>
             <section className={styles.contact}>
-                <motion.h1 className={styles.contact_title} initial='hidden' whileInView='show' variants={titleVariants} viewport={{once: true, amount: 0.6}}>
+                <motion.h1 className={styles.contact_title} initial='hidden' whileInView='show' variants={titleVariants} viewport={{once: true, amount: 0.3}}>
                     Submit a help request and 
                     we’ll get in touch shortly.
                 </motion.h1>
